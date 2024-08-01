@@ -1,11 +1,10 @@
 from flask import Flask, request, jsonify
 import sqlite3
-import os
 import pandas as pd
 from datetime import datetime
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'default_secret_key')
+
 
 def get_date_range(period):
     """

@@ -1,21 +1,26 @@
-# Forex Scraper
+# Forex Scraper and API
 
-A Python application for scraping and providing forex data via an API.
+## Overview
 
-## Description
+This project consists of a Forex data scraper and an API to provide historical forex data. The scraper collects data for specified currency pairs and stores it in an SQLite database. The API exposes this data through a RESTful endpoint.
 
-This project provides an API to fetch historical forex data for specified currency pairs over a given period. It uses Flask for the web framework and SQLite for data storage.
+## Features
 
-## Getting Started
+- **Scraper:** Fetches forex data for specified currency pairs (e.g., GBP - INR, AED - INR) from Yahoo Finance.
+- **API:** Provides historical forex data through a RESTful API endpoint.
+
+## Setup and Installation
 
 ### Prerequisites
 
-- Python 3.8 or later
-- pip
+- Python 3.8 or higher
+- SQLite (included with Python)
+- `pip` for installing Python packages
 
 ### Installation
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/jatinprashant422/forex_scrapper.git
+   ```sh
+   git clone https://github.com/your-username/your-repository.git
+   cd your-repository
 

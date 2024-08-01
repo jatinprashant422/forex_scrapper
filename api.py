@@ -1,10 +1,10 @@
 from flask import Flask, request, jsonify
 import sqlite3
 import pandas as pd
+import os
 from datetime import datetime
 
 app = Flask(__name__)
-
 
 def get_date_range(period):
     """
@@ -30,6 +30,13 @@ def get_date_range(period):
     else:
         return None, None
     return start_date.strftime('%Y-%m-%d'), now.strftime('%Y-%m-%d')
+
+@app.route('/')
+def index():
+    """
+    Base route to confirm the API is live.
+    """
+    return "Forex Scraper API is live!"
 
 @app.route('/api/forex-data', methods=['POST'])
 def forex_data():
